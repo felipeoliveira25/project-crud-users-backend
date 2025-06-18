@@ -23,6 +23,7 @@ export class AuthService {
     }
 
     if (password === admin.password) {
+      console.log('🚀 ~ AuthService ~ validateUser ~ password:', password);
       const { password: _, ...adminData } = admin;
 
       return this.jwtService.sign(adminData);
