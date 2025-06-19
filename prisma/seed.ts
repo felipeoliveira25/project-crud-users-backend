@@ -18,7 +18,7 @@ async function main() {
       telephone: '123456789',
       role: 'USER',
       age: 30,
-      salary: '5000',
+      salary: 5000,
     },
   });
 

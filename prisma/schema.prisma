@@ -22,5 +22,5 @@ model Users {
   telephone String @default("") @db.VarChar
   role      String @default("") @db.VarChar
   age       Int    @db.SmallInt
-  salary    String @default("") @db.VarChar
+  salary    Int
 }

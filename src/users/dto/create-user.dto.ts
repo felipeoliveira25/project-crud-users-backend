@@ -16,6 +16,6 @@ export class CreateUserDto {
   @IsNumber()
   age: number;
 
-  @IsString()
-  salary: string;
+  @IsNumber()
+  salary: number;
 }
