@@ -7,7 +7,7 @@ async function main() {
   await prisma.admin.create({
     data: {
       username: 'useradmin',
-      password: 'admin123', // TODO: Implementar bcrypt em produção
+      password: 'admin123',
     },
   });
 

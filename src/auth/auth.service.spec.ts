@@ -18,14 +18,14 @@ describe('AuthService', () => {
           provide: PrismaService,
           useValue: {
             admin: {
-              findUnique: jest.fn(), // Mock do método findUnique
+              findUnique: jest.fn(),
             },
           },
         },
         {
           provide: JwtService,
           useValue: {
-            sign: jest.fn(), // Mock do método sign
+            sign: jest.fn(),
           },
         },
       ],

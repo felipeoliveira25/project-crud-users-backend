@@ -17,13 +17,13 @@ describe('AuthController', () => {
         {
           provide: AuthService,
           useValue: {
-            validateUser: jest.fn(), // Mock do método validateUser
+            validateUser: jest.fn(),
           },
         },
       ],
     })
       .overrideGuard(LocalGuard)
-      .useValue({ canActivate: jest.fn(() => true) }) // Mock do LocalGuard
+      .useValue({ canActivate: jest.fn(() => true) })
       .compile();
 
     controller = module.get<AuthController>(AuthController);

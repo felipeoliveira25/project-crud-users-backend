@@ -47,7 +47,7 @@ describe('UsersController', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
       const createdUser = {
         id: 1,
@@ -56,7 +56,7 @@ describe('UsersController', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(usersService, 'create').mockResolvedValue(createdUser);
@@ -86,7 +86,7 @@ describe('UsersController', () => {
           telephone: '123456789',
           role: 'USER',
           age: 30,
-          salary: '5000',
+          salary: 5000,
         },
       ];
 
@@ -117,7 +117,7 @@ describe('UsersController', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(usersService, 'findOne').mockResolvedValue(user);
@@ -146,7 +146,7 @@ describe('UsersController', () => {
         telephone: '987654321',
         role: 'ADMIN',
         age: 35,
-        salary: '6000',
+        salary: 6000,
       };
       const updatedUser = {
         id: userId,
@@ -155,7 +155,7 @@ describe('UsersController', () => {
         telephone: '987654321',
         role: 'ADMIN',
         age: 35,
-        salary: '6000',
+        salary: 6000,
       };
 
       jest.spyOn(usersService, 'update').mockResolvedValue(updatedUser);
@@ -185,7 +185,7 @@ describe('UsersController', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(usersService, 'remove').mockResolvedValue(deletedUser);

@@ -12,7 +12,7 @@ import { UsersService } from './users.service';
 describe('UsersService', () => {
   let service: UsersService;
   let prismaService: PrismaService;
-  let cacheManager: any; // Tipagem parcial para CacheManager
+  let cacheManager: any;
   let configService: ConfigService;
 
   beforeEach(async () => {
@@ -42,7 +42,7 @@ describe('UsersService', () => {
         {
           provide: ConfigService,
           useValue: {
-            get: jest.fn().mockReturnValue(60), // Mock CACHE_TTL padrão
+            get: jest.fn().mockReturnValue(60),
           },
         },
       ],
@@ -66,7 +66,7 @@ describe('UsersService', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
       const createdUser = { id: 1, ...createUserDto };
 
@@ -93,7 +93,7 @@ describe('UsersService', () => {
           telephone: '123456789',
           role: 'USER',
           age: 30,
-          salary: '5000',
+          salary: 5000,
         },
       ];
 
@@ -115,7 +115,7 @@ describe('UsersService', () => {
           telephone: '123456789',
           role: 'USER',
           age: 30,
-          salary: '5000',
+          salary: 5000,
         },
       ];
 
@@ -143,7 +143,7 @@ describe('UsersService', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(cacheManager, 'get').mockResolvedValue(cachedUser);
@@ -164,7 +164,7 @@ describe('UsersService', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(cacheManager, 'get').mockResolvedValue(null);
@@ -213,7 +213,7 @@ describe('UsersService', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(prismaService.users, 'update').mockResolvedValue(updatedUser);
@@ -241,7 +241,7 @@ describe('UsersService', () => {
         telephone: '123456789',
         role: 'USER',
         age: 30,
-        salary: '5000',
+        salary: 5000,
       };
 
       jest.spyOn(prismaService.users, 'delete').mockResolvedValue(deletedUser);

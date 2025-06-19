@@ -18,7 +18,6 @@ export class UsersService {
     const user = await this.prisma.users.create({
       data,
     });
-    // Invalida o cache da lista de usuários
     await this.cacheManager.del('users_list');
     return user;
   }
@@ -62,7 +61,6 @@ export class UsersService {
       where: { id },
       data,
     });
-    // Invalida os caches da lista e do usuário específico
     await this.cacheManager.del('users_list');
     await this.cacheManager.del(`user_${id}`);
     return user;
@@ -73,7 +71,6 @@ export class UsersService {
       const user = await this.prisma.users.delete({
         where: { id },
       });
-      // Invalida os caches da lista e do usuário específico
       await this.cacheManager.del('users_list');
       await this.cacheManager.del(`user_${id}`);
       return user;
